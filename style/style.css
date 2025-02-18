@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navMenu-container { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navMenu {
+    display: flex;
+    width: 20%;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+}
