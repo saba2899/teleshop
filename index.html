@@ -11,17 +11,50 @@
 
 <body>
     <header>
-        <div class="navMenu-container">
-            <div class="navMenu">
+        <button id="burgerMenu"><i class="fa-solid fa-bars"></i></button>
+        <div class="title-container">
+            <h1>TeleShop</h1>
+        </div>
+        <div class="navMenu-container" id="navMenu-container">
+            <div class="navMenu" id="navMenu">
                 <a href="">მთავარი</a>
                 <a href="">პროდუქტები</a>
                 <a href="">კონტაქტი</a>
             </div>
-            <div class="theme-container">
-                <button><i class="fa-solid fa-circle-half-stroke"></i></button>
-            </div>
         </div>
+        <div class="theme-container">
+            <input type="search" id="search">
+            <button><i class="fa-solid fa-circle-half-stroke" id="themeToggle"></i></button>
+        </div>
+
     </header>
+    <div class="slideshow-container">
+        <div class="slides fade">
+            <img src="./Images/Asus ROG Phone 7.webp" alt="">
+        </div>
+        <div class="slides fade">
+            <img src="./Images/Huawei P60 Pro.jpg" alt="">
+        </div>
+        <div class="slides fade">
+            <img src="./Images/iphone 15 pro.webp" alt="">
+        </div>
+        <div class="slides fade">
+            <img src="./Images/OnePlus 11.jpeg" alt="">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-arrow-left"></i></a>
+        <a class="next" onclick="plusSlides(1)"><i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="dots-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/slideshow.js"></script>
 </body>
 
 </html>
