@@ -43,16 +43,61 @@
 .original-price {
     font-size: 16px;
     text-decoration: line-through;
-    color: red;  
+    color: red;
     margin-bottom: 5px;
 }
 
 .discount-price {
     font-size: 18px;
     font-weight: bold;
-    color: #4CAF50;  
+    color: #4CAF50;
 }
 
 .product-card p {
     margin: 5px 0;
+}
+
+.modalWindow {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    z-index: 1;
+    width: 55%;
+    height: 60vh;
+    background-color: rgb(202, 199, 198);
+}
+
+.modal-window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+
+}
+
+.modalPhoto {
+    border-radius: 25px;
+    width: 250px;
+    height: 350px;
+}
+
+.additionalInfo {
+    width: 100%;
+    background-color: #4CAF50;
+    padding: 20px;
+    margin: 10px;
+}
+
+.mainText {
+    font-weight: bold;
+}
+
+
+.detailBtn {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 8px;
+    margin-top: 10px;
 }
