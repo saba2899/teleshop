@@ -2,6 +2,8 @@ const burgerMenu = document.getElementById('burgerMenu');
 const navMenu = document.getElementById('navMenu');
 const themeToggle = document.getElementById('themeToggle');
 const navMenuText = document.querySelectorAll('.navMenu a');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
 
 burgerMenu.addEventListener('click', () => {
     burgerMenu.classList.toggle('active');
@@ -14,12 +16,16 @@ function checktheme() {
     if(currentTheme === 'dark') {
         document.body.classList.add('dark')
         themeToggle.style.color = "white";
+        prev.style.color = "white";
+        next.style.color = "white";
         navMenuText.forEach(link => {
             link.style.color = "white"
         })
     } else {
         document.body.classList.add('light')
         themeToggle.style.color = "black";
+        prev.style.color = "black";
+        next.style.color = "black";
         navMenuText.forEach(link => {
             link.style.color = "black"
         })
@@ -34,6 +40,8 @@ function themeChange() {
         document.body.classList.add('light');
         localStorage.setItem('theme', 'light');
         themeToggle.style.color = "black";
+        prev.style.color = "black";
+        next.style.color = "black";
         navMenuText.forEach(link => {
             link.style.color = "black"
         })
@@ -42,6 +50,8 @@ function themeChange() {
         document.body.classList.add('dark');
         localStorage.setItem('theme', 'dark')
         themeToggle.style.color = "white";
+        prev.style.color = "white";
+        next.style.color = "white";
         navMenuText.forEach(link => {
             link.style.color = "white"
         })
