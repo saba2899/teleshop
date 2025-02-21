@@ -61,7 +61,6 @@ export function fetchData() {
                         detailBtn.style.display = "none";
                         additionalInfo.style.display = "block";
                     })
-
                     modalWindowHtml.appendChild(modalWindow);
                 });
             })

@@ -57,67 +57,106 @@
     margin: 5px 0;
 }
 
-.test {
-    display: none;
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    width:100%;
-    background-color: rgba(239, 239, 240, 0.3);
-}
-
-
 .modalWindow {
     position: fixed;
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    border: 1px solid black;
-    z-index: 1;
-    width: 55%;
-    height: 70vh;
-    background-color: rgb(202, 199, 198);
+    z-index: 1000;
+    width: 50%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    opacity: 0;
+    animation: modalFadeIn 0.5s ease-out forwards;
+    border: none;
 }
 
 .modal-window {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     width: 100%;
-
 }
 
 .modalPhoto {
-    border-radius: 25px;
+    border-radius: 12px;
     width: 250px;
-    height: 350px;
+    height: auto;
+    object-fit: cover;
 }
 
 .additionalInfo {
     width: 100%;
-    background-color: #4CAF50;
-    padding: 20px;
-    margin: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
 }
 
 .mainText {
     font-weight: bold;
+    font-size: 20px;
+    color: #333;
 }
-
 
 .detailBtn {
     cursor: pointer;
+    border: none;
     border-radius: 5px;
-    padding: 8px;
-    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.detailBtn:hover {
+    background-color: #388E3C;
 }
 
 #closeBtn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
     cursor: pointer;
+    font-size: 18px;
+    color: #666;
+    background: none;
+    border: none;
+    transition: color 0.3s;
+}
+
+#closeBtn:hover {
+    color: black;
+}
+
+.test {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -10%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
 }
