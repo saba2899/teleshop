@@ -5,15 +5,19 @@ const navMenuText = document.querySelectorAll('.navMenu a');
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 
+
 burgerMenu.addEventListener('click', () => {
     burgerMenu.classList.toggle('active');
     navMenu.classList.toggle('active');
 });
 
 
+
+
+
 function checktheme() {
     const currentTheme = localStorage.getItem('theme');
-    if(currentTheme === 'dark') {
+    if (currentTheme === 'dark') {
         document.body.classList.add('dark')
         themeToggle.style.color = "white";
         prev.style.color = "white";
@@ -21,6 +25,7 @@ function checktheme() {
         navMenuText.forEach(link => {
             link.style.color = "white"
         })
+
     } else {
         document.body.classList.add('light')
         themeToggle.style.color = "black";

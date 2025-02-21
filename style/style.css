@@ -15,6 +15,10 @@ body.dark {
     color: #ffffff;
 } 
 
+.darkPriceColor {
+    color: #000000;
+}
+
 * {
     margin: 0;
     padding: 0;
