@@ -6,14 +6,45 @@ body {
 }
 
 body.light {
+    
+    color: #000000;
+}
+
+body.light .navMenu {
     background-color: #ffffff;
+}
+
+body.light .navMenu a {
+    color: #f3efef;
+}
+
+body.light #burgerMenu {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.light .theme-container button {
     color: #000000;
 }
 
 body.dark {
     background-color: #121212;
     color: #ffffff;
-} 
+}
+
+
+body.dark .navMenu a {
+    color: #ffffff;
+}
+
+body.dark #burgerMenu {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark .theme-container button {
+    color: #ffffff;
+}
 
 .darkPriceColor {
     color: #000000;
@@ -36,7 +67,7 @@ header {
     gap: 40px;
 }
 
-.navMenu > a {
+.navMenu>a {
     color: #000000;
     text-decoration: none;
 }
@@ -63,6 +94,13 @@ header {
 
 #burgerMenu {
     display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: #000000;
+}
+
+#burgerMenu i {
+    font-size: 30px;
 }
 
 .slideshow-container {
@@ -84,7 +122,8 @@ header {
     text-align: center;
 }
 
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     width: auto;
@@ -94,13 +133,14 @@ header {
     font-size: 28px;
     transition: 0.6s ease;
     border-radius: 3px;
-    user-select: none; 
+    user-select: none;
 }
 
 .prev {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+
     :hover {
         background-color: #504f4f;
         color: #ffffff;
@@ -111,6 +151,7 @@ header {
     top: 50%;
     right: 0;
     transform: translateY(-50%);
+
     :hover {
         background-color: #504f4f;
         color: #ffffff;
@@ -135,22 +176,36 @@ header {
     transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
     background-color: #717171;
 }
 
 
-  .fade {
+.fade {
     animation-name: fade;
     animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
 
 @media screen and (max-width: 768px) {
+
+    body.light .navMenu {
+        background-color: rgba(241, 238, 238, 0.9); 
+    }
+
+    body.light .navMenu a {
+        color: #ffffff;
+    }
 
     header {
         display: flex;
@@ -165,24 +220,28 @@ header {
 
     .navMenu {
         display: none;
-        background-color: rgb(173, 172, 171);
-    }
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding: 10px;
+        z-index: 1000;
 
-    .navMenu {
-        font-size: 12px;
     }
 
     .navMenu a:hover {
-        font-size: 12px;
         text-decoration: none;
     }
 
     .navMenu.active {
         display: flex;
         flex-direction: column;
-        gap: 5px;
-        border: 1px solid black;
-        padding: 5px;
+        gap: 10px;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        z-index: 9999;
     }
 
     .navMenu-container {
@@ -195,7 +254,11 @@ header {
     }
 
     #burgerMenu {
+        position: fixed;
+        left: 0;
         display: block;
+        outline: none;
+        border: none;
     }
 
     #search {
@@ -231,7 +294,8 @@ header {
         border-radius: 3px;
     }
 
-    .prev, .next {
+    .prev,
+    .next {
         cursor: pointer;
         position: absolute;
         width: auto;
@@ -240,7 +304,7 @@ header {
         font-weight: bold;
         font-size: 18px;
         transition: 0.6s ease;
-        border-radius: 3px;   
-        user-select: none; 
+        border-radius: 3px;
+        user-select: none;
     }
 }

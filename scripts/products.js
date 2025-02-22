@@ -1,6 +1,6 @@
 let productsContainer = document.querySelector('.products-container');
 let modalWindowHtml = document.querySelector('.modalWindow');
-let test = document.querySelector('.test');
+let mainModal = document.querySelector('.mainModal');
 const closeBtn = document.getElementById('closeBtn');
 let modalWindow;
 
@@ -35,7 +35,7 @@ export function fetchData() {
                     modalWindow = document.createElement('div');
                     modalWindow.classList.add('modal-window');
 
-                    test.style.display = "block";
+                    mainModal.style.display = "block";
 
                     modalWindow.innerHTML = `
                 <h3 class="modalName">${products.name}</h3>
@@ -65,12 +65,12 @@ export function fetchData() {
                 });
             })
         });
-    }
+}
 
-    export function closeAction() {
-        closeBtn.addEventListener('click', () => {
-            test.style.display = 'none';
-            modalWindowHtml.removeChild(modalWindow);
-        })
-    }
+export function closeAction() {
+    closeBtn.addEventListener('click', () => {
+        mainModal.style.display = 'none';
+        modalWindowHtml.removeChild(modalWindow);
+    })
+}
 

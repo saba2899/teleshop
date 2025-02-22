@@ -8,14 +8,21 @@
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="./style/products.css">
+    <link rel="stylesheet" href="./style/form.css">
+    <link rel="stylesheet" href="./style/footer.css">
 </head>
 
 <body>
     <header>
-        <button id="burgerMenu"><i class="fa-solid fa-bars"></i></button>
+
+        <button id="burgerMenu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
         <div class="title-container">
             <h1>TeleShop</h1>
         </div>
+
         <div class="navMenu-container" id="navMenu-container">
             <div class="navMenu" id="navMenu">
                 <a href="">მთავარი</a>
@@ -23,6 +30,7 @@
                 <a href="">კონტაქტი</a>
             </div>
         </div>
+
         <div class="theme-container">
             <input type="search" id="search">
             <button><i class="fa-solid fa-circle-half-stroke" id="themeToggle"></i></button>
@@ -57,15 +65,71 @@
     <div class="products-container">
     </div>
 
-    <div class="test">
+    <div class="mainModal">
         <div class="modalWindow">
             <i class="fa-solid fa-x" id="closeBtn"></i>
         </div>
     </div>
 
-    <script  src="./scripts/app.js"></script>
-    <script  src="./scripts/slideshow.js"></script>
+    <div class="form-container">
+        <form action="">
+            <label for="name">სახელი</label>
+            <input type="text" id="name">
+            <span id="fnameError"></span> 
+    
+            <label for="email">ელ-ფოსტა</label>
+            <input type="email" id="email">
+            <span id="emailError"></span> 
+    
+            <label for="tel">ტელეფონი</label>
+            <input type="tel" id="tel">
+            <span id="telError"></span>
+    
+            <label for="text">შეტყობინება</label>
+            <input type="text" id="text">
+            <span id="textError"></span> 
+    
+            <button id="sendBtn" disabled>გაგზავნა</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TeleShop</h3>
+                <p>ჩვენი მაღაზია გთავაზობთ საუკეთესო ელექტრონიკას და ტექნოლოგიურ პროდუქტებს.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>საკონტაქტო ინფორმაცია</h3>
+                <ul>
+                    <li><i class="fa-solid fa-phone"></i> +995 593 14 13 12 </li>
+                    <li><i class="fa-solid fa-envelope"></i> info@teleshop.com</li>
+                    <li><i class="fa-solid fa-location-pin"></i> თბილისი, საქართველო</li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>სოციალური მედია</h3>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>© 2025 TeleShop. ყველა უფლება დაცულია.</p>
+        </div>
+    </footer>
+    
+
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/slideshow.js"></script>
     <script type="module" src="./scripts/main.js"></script>
+    <script src="./scripts/form.js"></script>
 </body>
 
 </html>

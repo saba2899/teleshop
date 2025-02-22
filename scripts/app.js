@@ -18,22 +18,21 @@ burgerMenu.addEventListener('click', () => {
 function checktheme() {
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme === 'dark') {
-        document.body.classList.add('dark')
+        document.body.classList.add('dark');
         themeToggle.style.color = "white";
         prev.style.color = "white";
         next.style.color = "white";
         navMenuText.forEach(link => {
-            link.style.color = "white"
-        })
-
+            link.style.color = "white";
+        });
     } else {
-        document.body.classList.add('light')
+        document.body.classList.add('light');
         themeToggle.style.color = "black";
         prev.style.color = "black";
         next.style.color = "black";
         navMenuText.forEach(link => {
-            link.style.color = "black"
-        })
+            link.style.color = "black"; 
+        });
     }
 }
 

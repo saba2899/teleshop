@@ -35,6 +35,7 @@
 }
 
 .product-name {
+    color: #333;
     font-size: 18px;
     font-weight: bold;
     margin: 10px 0;
@@ -78,6 +79,10 @@
     border: none;
 }
 
+.modalName {
+    color: #333;
+}
+
 .modal-window {
     display: flex;
     flex-direction: column;
@@ -100,6 +105,7 @@
     text-align: center;
     background-color: #f9f9f9;
     border-radius: 8px;
+    color: #333;
 }
 
 .mainText {
@@ -139,7 +145,7 @@
     color: black;
 }
 
-.test {
+.mainModal {
     display: none;
     position: fixed;
     top: 0;
@@ -155,8 +161,34 @@
         opacity: 0;
         transform: translate(-50%, -10%);
     }
+
     to {
         opacity: 1;
         transform: translate(-50%, 0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .products-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .product-card {
+        width: 90%;
+        margin: auto;
+    }
+
+    .modalWindow {
+        width: 90%;
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .modalPhoto {
+        border-radius: 12px;
+        width: 250px;
+        height: auto;
+        object-fit: cover;
     }
 }
